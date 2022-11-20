@@ -1,3 +1,0 @@
-- [Elementary](elementary/README.md "初级前端")
-- [SemiSenior](semi-senior/README.md "中级前端")
-- [Senior](senior/README.md "高级前端")

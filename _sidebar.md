@@ -1,5 +1,7 @@
+- [首页](/home)
 - [Docsify](docsify/ "docsify")
-
-- [生活](life/README.md "生活")
-
-- [前端](frontend/README.md "前端")
+- [生活](life/ "生活")
+- [前端](frontend/ "前端")
+  - [初阶](frontend/elementary/ "初阶")
+  - [中阶](frontend/semi-senior/ "中阶")
+  - [高阶](frontend/senior/ "高阶")

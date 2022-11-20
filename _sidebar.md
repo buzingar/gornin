@@ -1,6 +1,7 @@
-- [首页](/home)
+- [首页](/)
 - [Docsify](docsify/ "docsify")
 - [生活](life/ "生活")
+  - [片段](life/thinking.md "小记")
 - [前端](frontend/ "前端")
   - [初阶](frontend/elementary/ "初阶")
   - [中阶](frontend/semi-senior/ "中阶")

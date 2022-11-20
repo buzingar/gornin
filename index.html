@@ -44,34 +44,23 @@
         --sidebar-name-padding: 0;
         --code-font-size: 0.9em;
       } */
-      .sidebar > h1 {
-        margin-bottom: -0.75em;
-        margin-top: 0.75em;
-      }
-      .sidebar > h1 img {
-        height: 4em;
-      }
-      .markdown-section a code {
-        color: var(--link-color) !important;
-      }
-      .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
-        white-space: unset;
-      }
     </style>
   </head>
   <body>
     <div id="app">Please wait...</div>
     <script>
       window.$docsify = {
-        name: "",
-        repo: "",
+        name: "gornin's doc",
+        repo: "https://github.com/buzingar/gornin",
+        homepage: "home.md", // 入口文件改为 /home.md，设置首页文件加载路径，适合不想将 README.md 作为入口文件渲染
         loadSidebar: true,
+        subMaxLevel: 4, // 设置生成目录的最大层级
         alias: {
           "/.*/_sidebar.md": "/_sidebar.md",
         },
         loadNavbar: true,
-        // 开启封面,加载_coverpage.md
-        coverpage: true,
+        coverpage: true, // 开启封面,加载_coverpage.md
+        auto2top: true, // 切换页面后是否自动跳转到页面顶部
       };
     </script>
     <!-- Docsify v4 -->

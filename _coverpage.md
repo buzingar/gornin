@@ -5,7 +5,7 @@
 # EXPLORE & DISCOVER & LEARN <small>@gornin</small>
 
 [repo](https://github.com/buzingar/gornin)
-[瞅一瞅](/home.md)
+[瞅一瞅](/home)
 
 <!-- background image -->
 

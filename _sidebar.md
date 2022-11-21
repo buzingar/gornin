@@ -1,6 +1,7 @@
 - [首页](/)
 - [Docsify](docsify/ "docsify")
 - [生活](life/ "生活")
+  - [育儿](life/baby/word-to-baby.md "絮叨")
   - [片段](life/thinking.md "小记")
 - [前端](frontend/ "前端")
   - [初阶](frontend/elementary/ "初阶")

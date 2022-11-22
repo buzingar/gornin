@@ -4,7 +4,7 @@
   - [育儿](life/baby/)
     - [40 周怀孕全程指导](life/baby/40-weeks-guide.md "40周怀孕全程指导")
     - [絮叨](life/baby/word-to-baby.md "絮叨")
-  - [片段](life/diary.md "小记")
+  - [小记](life/diary.md "小记")
 - [前端](frontend/ "前端")
   - [初阶](frontend/elementary/ "初阶")
   - [中阶](frontend/semi-senior/ "中阶")

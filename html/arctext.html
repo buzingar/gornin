@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arc text</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        margin-left: 200px;
+        margin-top: 100px;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 300px;
+        background: #000;
+      }
+      .content p {
+        display: inline-block;
+      }
+      .content p.padding {
+        padding-right: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="content">
+        <p class="text">
+          1.文字如果超出了宽度自动向左滚动文字如果超出了宽度自动向左滚动。
+        </p>
+      </div>
+    </div>
+    <script>
+      let [box, content, text] = [
+        document.querySelector(".box"),
+        document.querySelector(".content"),
+        document.querySelector(".text"),
+      ];
+
+      let [textWidth, boxWidth] = [text.offsetWidth, box.offsetWidth];
+
+      function toScrollLeft() {
+        //  如果文字长度大于滚动条距离，则递归拖动
+        if (textWidth > box.scrollLeft) {
+          box.scrollLeft++;
+          setTimeout("toScrollLeft()", 18);
+        } else {
+          // setTimeout("fun2()",2000);
+        }
+      }
+
+      window.onload = function checkScrollLeft() {
+        // 判断文字长度是否大于盒子长度
+        if (boxWidth > textWidth) {
+          return false;
+        }
+        content.innerHTML += content.innerHTML;
+        document.querySelector(".text").classList.add("padding");
+        // 更新
+        textWidth = document.querySelector(".text").offsetWidth;
+        toScrollLeft();
+      };
+    </script>
+  </body>
+</html>

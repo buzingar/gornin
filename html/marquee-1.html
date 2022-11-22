@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>rotate text around the ball</title>
+    <input type="hidden" id="_w_marrow" data-inspect-config="3" />
+
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .wrapper {
+        /* width: 400px;
+        height: 400px; */
+        margin: 0 200px;
+        perspective: 800px;
+        perspective-origin: 50% 50%;
+        position: relative;
+      }
+
+      .coords {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #ccc;
+        box-shadow: 0px 55px 45px -38px rgba(0, 0, 0, 0.3);
+      }
+
+      .sphere {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #ccc;
+        box-shadow: 0px 55px 45px -38px rgba(0, 0, 0, 0.3);
+      }
+      .sphere::before {
+        content: "";
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: -webkit-radial-gradient(
+          50% 0px,
+          circle,
+          #ffffff,
+          rgba(255, 255, 255, 0) 58%
+        );
+        z-index: 2;
+      }
+
+      .main-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -20%, 0);
+        z-index: 2;
+      }
+
+      .stage {
+        /* background-color: rgba(50, 100, 150, 0.1); */
+        transform-style: preserve-3d;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, 160%, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        white-space: nowrap;
+        /* backface-visibility: hidden; */
+      }
+      .text1 {
+        animation: rotate1 10s linear -7.5s infinite;
+      }
+      .text2 {
+        animation: rotate2 10s linear -5s infinite;
+      }
+      .text3 {
+        animation: rotate3 10s linear -2.5s infinite;
+      }
+      .text4 {
+        animation: rotate4 10s linear 0s infinite;
+      }
+
+      @keyframes rotate1 {
+        from {
+          transform: translateX(150px) rotateX(-30deg) rotateY(0deg)
+            translateZ(100px);
+          /* transform: translate3d(150px, 0, 100px) rotate3d(30deg, 0deg, 0deg); */
+        }
+        to {
+          transform: translateX(150px) rotateX(-30deg) rotateY(-360deg)
+            translateZ(100px);
+          /* transform: translate3d(150px, 0, 100px) rotate3d(30deg, -360deg, 0deg); */
+        }
+      }
+      @keyframes rotate2 {
+        from {
+          transform: translateX(50px) rotateX(-30deg) rotateY(0deg)
+            translateZ(100px);
+        }
+
+        to {
+          transform: translateX(50px) rotateX(-30deg) rotateY(-360deg)
+            translateZ(100px);
+        }
+      }
+      @keyframes rotate3 {
+        from {
+          transform: translateX(-50px) rotateX(-30deg) rotateY(0deg)
+            translateZ(100px);
+        }
+
+        to {
+          transform: translateX(-50px) rotateX(-30deg) rotateY(-360deg)
+            translateZ(100px);
+        }
+      }
+      @keyframes rotate4 {
+        from {
+          transform: translateX(-150px) rotateX(-30deg) rotateY(0deg)
+            translateZ(100px);
+        }
+
+        to {
+          transform: translateX(-150px) rotateX(-30deg) rotateY(-360deg)
+            translateZ(100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="coords" src="./coords.png" alt="" />
+    <div class="wrapper">
+      <!-- <div class="sphere"></div> -->
+      <img class="main-img" src="./0.png" alt="tower" />
+      <div class="stage">
+        <div class="text text1">
+          <img src="./1.png" />
+          <span>1000</span>
+        </div>
+        <div class="text text2">
+          <img src="./2.png" />
+          <span>2000</span>
+        </div>
+        <div class="text text3">
+          <img src="./3.png" />
+          <span>3000</span>
+        </div>
+        <div class="text text4">
+          <img src="./4.png" />
+          <span>4000</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle1 {
+        width: 100px;
+        height: 200px;
+        border: 1px solid black;
+        /* 左半圆 */
+        border-radius: 100% 0 0 100%/50%;
+        border-right: none;
+      }
+
+      .circle2 {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        /* 上半圆 */
+        border-radius: 50% 50% 0 0/100% 100% 0 0;
+        border-bottom: none;
+      }
+
+      .circle3 {
+        width: 100px;
+        height: 200px;
+        border: 1px solid black;
+        /* 右半圆 */
+        border-radius: 0 100% 100% 0/50%;
+        border-left: none;
+      }
+
+      .circle4 {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        /* 下半圆 */
+        border-radius: 0 0 50% 50%/0 0 100% 100%;
+        border-top: none;
+      }
+      .row {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle2"></div>
+    <div class="row">
+      <div class="circle3"></div>
+      <div class="circle1"></div>
+    </div>
+    <div class="circle4"></div>
+    <script type="text/javascript"></script>
+  </body>
+</html>

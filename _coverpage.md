@@ -2,11 +2,11 @@
 
 ![icon](_media/icon.jpg)
 
-# EXPLORE & DISCOVER & LEARN <small>@gornin</small>
+# Explore & Discover & Learn <small>@gornin</small>
 
 <!-- [repo](https://github.com/buzingar/gornin) -->
 
-[瞅一哈](/home)
+[👇](/home)
 
 <!-- background image -->
 

@@ -6,7 +6,7 @@
 
 <!-- [repo](https://github.com/buzingar/gornin) -->
 
-[👇](/home)
+[浏览](/home)
 
 <!-- background image -->
 

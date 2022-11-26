@@ -11,15 +11,12 @@
     />
     <link
       rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"
     />
-    <!-- 支持 LaTex 语言 -->
-    <!-- <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"
-    /> -->
-    <!-- 代码高亮主题 -->
-    <link rel="stylesheet" href="_themes/prism/prism-one-dark.css" />
     <!-- <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"
@@ -106,6 +103,27 @@
           color: "rgb(90,90,90)",
           language: "chinese",
         },
+        pagination: {
+          previousText: "上一篇",
+          nextText: "下一篇",
+          crossChapter: true,
+          crossChapterText: true,
+        },
+        // darklightTheme: {
+        //   defaultTheme: "light",
+        //   siteFont: "Source Sans Pro,Helvetica Neue,Arial,sans-serif",
+        //   codeFontFamily: "Roboto Mono, Monaco, courier, monospace",
+        //   bodyFontSize: "15px",
+        //   dark: {
+        //     background: "rgb(28,32,34)",
+        //     highlightColor: "#e96900",
+        //     codeBackgroundColor: "rgb(34,39,46)",
+        //     codeTextColor: "#b4b4b4",
+        //   },
+        //   light: {
+        //     highlightColor: "#e96900",
+        //   },
+        // },
       };
     </script>
     <!-- Docsify v4 -->
@@ -132,6 +150,25 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <!-- To enable syntax highlighting on TypeScript codes: -->
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-less.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-scss.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sass.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-xml-doc.min.js"></script>
+    <!-- 黑白主题 -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script> -->
     <!-- 实现离线化 -->
     <script>
       if (typeof navigator.serviceWorker !== "undefined") {

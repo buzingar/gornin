@@ -1,6 +1,7 @@
 <!-- _navbar.md -->
 
-<!-- - 入门
+<!--
+- 入门
 
   - [:us: 快速开始](zh-cn/quickstart.md)
   - [:uk: 多页文档](zh-cn/more-pages.md)
@@ -13,4 +14,5 @@
   - [主题](zh-cn/themes.md)
   - [使用插件](zh-cn/plugins.md)
   - [Markdown 配置](zh-cn/markdown.md)
-  - [代码高亮]() -->
+  - [代码高亮]()
+-->

@@ -1,1 +1,1 @@
-[visit my site](https://buzingar.github.io/gornin/#/)
+[visit my site](https://buingao.github.io/gornin/#/)

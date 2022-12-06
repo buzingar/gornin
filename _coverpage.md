@@ -4,7 +4,7 @@
 
 # Explore & Discover & Learn <small>@gornin</small>
 
-<!-- [repo](https://github.com/buzingar/gornin) -->
+<!-- [repo](https://github.com/buingao/gornin) -->
 
 [浏览](/home)
 

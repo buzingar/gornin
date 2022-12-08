@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style type="text/css">
+    #div {
+      width: 198px;
+      height: 66px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+  <script type="text/javascript">
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    // ondrag事件，定义在移动元素上
+    function dragPara(e) {
+      // e.dataTransfer应该是个公共对象，用于共享存储信息
+      e.dataTransfer.setData('para', e.target.id); // drag2
+      console.log('drag-dataTransfer:', e.dataTransfer);
+    }
+
+    // ondrop事件，定义在目标元素上，appendChild即发生在此元素上
+    function dropPara(e) {
+      e.preventDefault();
+      console.log('drop-dataTransfer:', e.dataTransfer);
+      // 通过name获取存储的node id，唯一标识
+      var data = e.dataTransfer.getData('para');
+      // 通过id获取node，追加到目标区域上
+      e.target.appendChild(document.getElementById(data))
+    }
+
+    function dragging(e) {
+      // DragEvent 对象，包含dataTransfer对象、位置信息等
+      console.log('dragging:', e);
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <p>请把 gornin & bubu 拖放到矩形中：</p>
+  <!-- 注意参数不能是e，需要为event -->
+  <div id="div" ondrop="dropPara(event)" ondragover="allowDrop(event)"></div>
+  <p id="drag" draggable="true" ondrag="dragging(event)" ondragstart="dragPara(event)">gornin & bubu</p>
+</body>
+
+</html>

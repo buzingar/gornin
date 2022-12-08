@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圣杯布局</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+
+      .container {
+        height: 100vh;
+        padding: 0 300px 0 200px;
+        /* border: 1px solid black; */
+      }
+
+      .content {
+        float: left;
+        width: 100%;
+        background: #f00;
+      }
+
+      .left {
+        width: 200px;
+        background: #0f0;
+        float: left;
+        margin-left: -100%;
+        /* relative 相对自身往左移动200px */
+        position: relative;
+        left: -200px;
+      }
+
+      .right {
+        width: 300px;
+        background: #00f;
+        float: left;
+        margin-left: -300px;
+        /* relative 相对自身往右移动300px */
+        position: relative;
+        right: -300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div>1. 外层container，设置左右padding</div>
+        <div>2. 左区宽=左padding，右区宽=右padding，都float:left</div>
+        <div>3. 通过margin-left挪动左右区域至同行两端</div>
+        <div>4. 再通过position:relative及left、right相对自身进一步挪动</div>
+      </div>
+      <div class="left">左侧区域</div>
+      <div class="right">右侧区域</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>双飞翼布局</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      /* div {
+        height: 100%;
+      } */
+
+      /* 中间部分 */
+      .main {
+        float: left;
+        width: 100%;
+        height: 100%;
+        background: #f00;
+      }
+
+      /* 控制内容区不被两侧栏覆盖 */
+      .main .content {
+        margin-left: 200px;
+        margin-right: 300px;
+      }
+
+      .left {
+        width: 200px;
+        height: 100%;
+        background: #0f0;
+        float: left;
+        /* 不加margin-left，三块都是左浮动，依次相邻，margin-left为负，就是向左移动100% */
+        margin-left: -100%;
+      }
+
+      .right {
+        width: 300px;
+        height: 100%;
+        background: #00f;
+        float: left;
+        /* 向左移动300px */
+        margin-left: -300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="content">
+        <div>
+          1.分为左中右三栏，其中中间栏需要子元素设置左右margin，防止被遮盖
+        </div>
+        <div>2.全部float:left,中间栏100%，两边栏固定宽度</div>
+        <div>3.通过设置margin-left挪动位置</div>
+      </div>
+    </div>
+    <div class="left">Hello</div>
+    <div class="right">Gornin</div>
+  </body>
+</html>

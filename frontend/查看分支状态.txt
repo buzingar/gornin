@@ -1,0 +1,39 @@
+查看分支状态
+git branch [-a]
+
+新建本地分支
+git checkout -b pc-fenyong
+
+推送远程
+// 建立本地到远端仓库的链接
+git push --set-upstream origin pc-fenyong
+git branch --set-upstream-to=origin/pc-fenyong
+git branch --set-upstream-to=origin/dev-fenyong dev-gn
+
+// 取消对pc-fenyong的跟踪
+git branch --unset-upstream pc-fenyong
+or
+git push origin HEAD -u
+or
+// 强制推送，同名覆盖
+git push origin pc-fenyong [--force]
+or
+// 提交本地 pc-fenyong 分支作为远程的 pc-fenyong 分支
+git push origin pc-fenyong:pc-fenyong
+
+
+//将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了
+git push -u origin master[:master]
+
+删除分支
+git push origin :pc-fenyong
+or
+git push origin --delete pc-fenyong
+
+# 可以删除远程分支pc-fenyong
+git push origin --delete pc-fenyong 
+
+再次 git branch -a 可以发现远程分支pc-fenyong已经被删除。
+
+# 删除本地分支
+git branch -d pc-fenyong

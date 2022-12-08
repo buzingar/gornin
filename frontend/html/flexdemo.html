@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Demo</title>
+  <style>
+    .container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .container-l {
+      width: 1000px;
+    }
+
+    .container-m {
+      width: 900px;
+    }
+
+    .container-s {
+      width: 800px;
+    }
+
+    .box {
+      width: 300px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .box-a {
+      background-color: aqua;
+      flex-basis: 350px;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    .box-b {
+      background-color: blueviolet;
+      flex-basis: 300px;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    .box-c {
+      background-color: crimson;
+      flex-basis: 250px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h2>flex | flex-grow | flex-shrink | flex-basis</h2>
+    <ul>
+      <li>flex-basis</li>
+      <li>flex-grow</li>
+      <li>flex-shrink</li>
+    </ul>
+    <p>在flex布局中，父元素在不同宽度下，子元素如何分配父元素空间</p>
+    <p>这三个属性都是在子元素上设置的</p>
+    <p>flex-basis: 该属性用来设置元素的宽度，占主轴的空间，会覆盖width</p>
+    <p>flex-grow: 该属性用来设置当父元素的宽度大于所有子元素的宽度的和时（即父元素会有剩余空间），子元素如何分配父元素的剩余空间。默认为0表示不扩大</p>
+    <p>flex-shrink: 该属性用来设置，当父元素的宽度小于所有子元素的宽度的和时（即子元素会超出父元素），子元素如何缩小自己的宽度。默认为1，为0表示不缩小</p>
+    <p>-------------------------------------------------------------</p>
+    <p>一基本单位 = Math.abs(父元素宽度 - 子元素总宽度) / 相同属性值之和</p>
+    <p>flex-grow 是增加若干个基本单位</p>
+    <p>flex-shrink 是减少若干个基本单位</p>
+    <p>-------------------------------------------------------------</p>
+    <p>flex 是 flex-grow flex-shrink flex-basis 的简写形式</p>
+    <ul>
+      <li>flex: none; 即 0 0 auto</li>
+      <li>flex: auto; 即 1 1 auto</li>
+      <li>flex: 一个非负数字n; 即 n 1 0%</li>
+      <li>flex: 两个非负数字x y; 即 x y 0%</li>
+      <li>flex: 一个长度或百分比 p%; 即 1 1 p%</li>
+    </ul>
+  </div>
+
+  <div class="container container-l">
+    <!-- 父宽度1000px，大于子元素总宽度900px，多了100px，算grow之和为2，一基本单位为100/2=50px，应用在box-a，box-b上，因为box-a,box-b设置了正数值的flex-grow，宽度各增加50px -->
+    <div class="box box-a">width: 400px</div>
+    <div class="box box-b">width: 350px</div>
+    <div class="box box-c">width: 250px</div>
+  </div>
+  <div class="container container-m">
+    <!-- 父宽度900px，子元素总宽度900px，不伸不缩，按flex-basis设置的宽度，而非width设置的宽度 -->
+    <div class="box box-a">width: 350px</div>
+    <div class="box box-b">width: 300px</div>
+    <div class="box box-c">width: 250px</div>
+  </div>
+  <div class="container container-s">
+    <!-- 父宽度800px，小于子元素总宽度900px，少了100px，算shrink之和为1，一基本单位为100/1=100px，应用在box-a上，因为只有box-a设置了正数值的flex-shrink，宽度缩小100px -->
+    <div class="box box-a">width: 250px</div>
+    <div class="box box-b">width: 300px</div>
+    <div class="box box-c">width: 250px</div>
+  </div>
+
+</body>
+
+</html>

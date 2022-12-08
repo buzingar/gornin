@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Normal</title>
+</head>
+
+<body>
+  <ul id="list"></ul>
+  <script>
+    const start = Date.now();
+    const _list = document.querySelector("#list");
+    for (let i = 0; i < 100000; i++) {
+      const _li = document.createElement('li');
+      _li.innerHTML = i;
+      _list.appendChild(_li);
+    }
+    const lasts = Date.now() - start;
+    console.log('normal持续时间：', lasts);
+  </script>
+</body>
+
+</html>

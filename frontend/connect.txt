@@ -1,0 +1,13 @@
+@connect(({loading})=>({loading}))
+
+const { loading: { effects } } = this.props;
+
+const spinning = effects['createModule/addTemplate'] || effects['createModule/updateModel'] || effects['createModule/queryTemplateDetail'] || false;
+
+
+
+git add . && git ci -n -m 'feat:修复新增案例的间距样式' && gp
+
+rm -rf *.tar.gz && npm run build
+
+rm -rf umi* static index.html

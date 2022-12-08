@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sticky</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      height: 100vh;
+      width: 100%
+    }
+
+    h1 {
+      height: 160px;
+      position: relative;
+      background-color: lightblue;
+    }
+
+    /* h1:after {
+      content: '';
+      position: absolute;
+      top: 160px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: red;
+    } */
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 38px;
+      border: 1px solid darkorange;
+      background-color: yellowgreen;
+    }
+
+    .scroll-container {
+      width: 100%;
+      height: 1600px;
+      background-color: lightgrey;
+    }
+
+    .inner-box {
+      width: 100%;
+      height: 366px;
+      background-color: deeppink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>高200px，距顶部100px</h1>
+  <div class="sticky-nav">这是一个tab切换栏，给sticky定位top=100px</div>
+  <div class="scroll-container">
+    <p class="inner-box">滚动区</p>
+  </div>
+  <!-- <p class="scroll-container" style="background:lightgoldenrodyellow;">发生滚动</p> -->
+</body>
+
+</html>

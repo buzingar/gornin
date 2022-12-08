@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 400px;
+      height: 400px;
+      background-color: aquamarine;
+      margin: 0 auto;
+    }
+
+    .box2 {
+      display: inline-block;
+      background-color: brown;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -25px 0 0 -25px;
+    }
+
+    .box3 {
+      width: 50px;
+      height: 50px;
+      float: left;
+      /* position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -25px 0 0 -25px; */
+      background-color: cornflowerblue
+    }
+
+    #parent {
+      height: 200px;
+      width: 200px;
+      border: 1px solid red;
+
+      display: flex;
+      /* 父元素转换为弹性盒 */
+      display: -webkit-flex;
+      /* Safari */
+    }
+
+    #child {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2">
+      <div class="box3">float</div>
+    </div>
+  </div>
+  <div id="parent">
+    <div id="child">内容</div>
+  </div>
+</body>
+
+</html>

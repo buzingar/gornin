@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: #444444;
+      color: white;
+      font: 15px/1.51 Helvetica, sans-serif;
+      margin: 0 auto;
+    }
+
+    .left-panel,
+    .right-panel {
+      padding: 2%;
+      margin: 0;
+      width: 46%;
+      float: left;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .left-panel {
+      background: #ccc;
+      color: black;
+    }
+  </style>
+  <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="left-panel">Raw resize events<br></div>
+  <div class="right-panel">Debounced events<br></div>
+
+  <script>
+    // Based on http://www.paulirish.com/2009/throttled-smartresize-jquery-event-handler/
+    $(document).ready(function () {
+
+      var $win = $(window);
+      var $left_panel = $('.left-panel');
+      var $right_panel = $('.right-panel');
+
+      function display_info($div) {
+        $div.append($win.width() + ' x ' + $win.height() + '<br>');
+      }
+
+      $(window).on('resize', function () {
+        display_info($left_panel);
+      });
+
+      $(window).on('resize', _.debounce(function () {
+        display_info($right_panel);
+      }, 400));
+    });
+  </script>
+</body>
+
+</html>

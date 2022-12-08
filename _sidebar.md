@@ -14,4 +14,4 @@
   - [中阶](frontend/semi-senior/ "中阶")
   - [高阶](frontend/senior/ "高阶")
 - [git](git/ "Git")
-- [Docsify](docsify/ "docsify")
+- [Docsify](docsify/ "Docsify")

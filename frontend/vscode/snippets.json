@@ -235,7 +235,7 @@
   "dvaServices": {
     "prefix": "zz-service-normal",
     "body": [
-      "import { post, get } from '@ali-whale/fetch-web';",
+      "import { post, get } from 'umi-request';",
       "",
       "export const getDemoList = data => get(`/path/\\${data}`);",
       "export const update = data => post('/path', data);",
